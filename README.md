@@ -17,3 +17,6 @@ What's in the box
 * Bootstrap
 * Sass
 * Browserify
+
+# Work In Progress
+Be careful, this is a work in progress ! Things may not work as expected
