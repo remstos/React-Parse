@@ -1,0 +1,20 @@
+{
+  "name": "Sample-React",
+  "version": "0.1.0",
+  "authors": [
+    "KemCake <santos.remi@icloud.com>"
+  ],
+  "description": "Sample React project",
+  "main": "js/app.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass-official": "~3.1.1+2"
+  }
+}
