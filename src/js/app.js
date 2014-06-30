@@ -5,7 +5,8 @@
 var React = require('react');
 
 var Parse = require('parse').Parse;
-Parse.initialize('PARSE_APP_ID', 'PARSE_JS_KEY');
+var ParseConfig = require('./stores/ParseConfig.json');
+Parse.initialize(ParseConfig.APP_ID, ParseConfig.JS_KEY);
 
 var App = require('./components/App.react');
 React.renderComponent(
