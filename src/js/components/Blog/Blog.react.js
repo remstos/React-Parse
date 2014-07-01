@@ -6,7 +6,7 @@
 var React = require('react');
 var ReactPropTypes = React.PropTypes;
 var PostPreview = require('./PostPreview.react')
-var PostStore = require('../stores/PostStore');
+var PostStore = require('../../stores/PostStore');
 
 var Blog = React.createClass({
 
@@ -37,14 +37,12 @@ var Blog = React.createClass({
 
     return (
       <section id="main">
-        <label htmlFor="toggle-all">Mark all as complete</label>
         <ul id="posts-list">{posts}</ul>
       </section>
     );
   },
 
   _getAllPosts: function(posts){
-    console.log(this);
     this.setState({allPosts:posts});
   }
 });

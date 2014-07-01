@@ -9,7 +9,9 @@ var Router = require('react-router-component')
 var Locations = Router.Locations
 var Location = Router.Location
 
-var Blog = require('./Blog.react');
+var Blog = require('./Blog/Blog.react');
+var PostView = require('./Blog/PostView.react');
+
 var App = React.createClass({
 
   getInitialState: function() {
@@ -17,7 +19,6 @@ var App = React.createClass({
   },
 
   componentDidMount: function() {
-    console.log(this.state.route)
   },
 
   componentWillUnmount: function() {
@@ -26,17 +27,14 @@ var App = React.createClass({
   /**
    * @return {object}
    */
-  render: function() {
-    
-    var content = <h3> Blog Detail </h3>;
-    
+  render: function() {    
   	return (
       <div>
         <Menu title="Reactit">
         </Menu>
         <Locations>
           <Location path="/" handler={Blog} />
-          <Location path="/p/:post" handler={Menu} />
+          <Location path="/post/:post" handler={PostView} />
         </Locations>
         <footer id="info">
     			<p>Sample React Project</p>
