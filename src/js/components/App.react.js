@@ -6,8 +6,9 @@ var Parse = require('parse').Parse;
 
 var Menu = require('./Menu.react');
 var Router = require('react-router-component')
-var Locations = Router.Locations
-var Location = Router.Location
+var Pages = Router.Pages
+var Page = Router.Page
+var NotFound = Router.NotFound;
 
 var Blog = require('./Blog/Blog.react');
 var PostView = require('./Blog/PostView.react');
@@ -18,10 +19,11 @@ var About = require('./About.react');
 var App = React.createClass({
 
   getInitialState: function() {
-    return {route: window.location.hash};
+    return {path: window.location.pathname+window.location.hash};
   },
 
-  componentDidMount: function() {
+  componentWillMount: function() {
+    console.log(this.state.path);
   },
 
   componentWillUnmount: function() {
@@ -35,11 +37,12 @@ var App = React.createClass({
       <div>
         <Menu title="Reactit">
         </Menu>
-        <Locations>
-          <Location path="/" handler={Blog} />
-          <Location path="/post/:post" handler={PostView} />
-          <Location path="/about" handler={About} />
-        </Locations>
+        <Pages path={this.state.path}>
+          <Page path="/" handler={Blog} />
+          <Page path="/#/post/:post" handler={PostView} />
+          <Page path="/#/about" handler={About} />
+          <NotFound handler={Blog} />
+        </Pages>
         <hr/>
         <footer id="info">
     			<p>Sample React Project</p>

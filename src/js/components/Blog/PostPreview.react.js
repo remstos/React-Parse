@@ -18,7 +18,7 @@ var PostPreview = React.createClass({
    */
   render: function() {
     var post = this.props.post;
-    var href = '/post/'+post.get('name');
+    var href = '/#/post/'+post.get('name');
     return (
       <li key={post.id}>
         <div className="view">

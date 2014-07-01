@@ -51,7 +51,7 @@ var Menu = React.createClass({
         <Navbar>
           <Nav>
             <Link className="navbar-brand" href="/">{this.state.title}</Link>
-            <Link className="navbar-brand" href="/about">
+            <Link className="navbar-brand" href="/#/about">
               <NavItem key={1}>About</NavItem>
             </Link>
             <NavItem key={2} href="#">Link</NavItem>
