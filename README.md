@@ -10,17 +10,29 @@ download and install it : [NodeJS](http://nodejs.org/download/).
 ### 2. First time with bower ?
 Bower is a package manager
 Simply run (maybe you'll need a `sudo`) :
-    `npm install -g bower` 
+```
+npm install -g bower
+```
+
 ### 3. First time with Compass ?
 Compass take care about Sass files to compile them in CSS
 Simply run :
-    `gem install compass`
+```
+gem install compass
+```
 
 Your environment is now ready to welcome this project
 ### 4. Run the project
-* `git clone https://github.com/Kemcake/React-Parse.git`
-* `npm install`
-* `npm start` and your app is build on every change
+``` 
+git clone https://github.com/Kemcake/React-Parse.git 
+```
+```
+npm install
+```
+```
+npm start
+```
+and your app is build on every change
 
 To run the app, launch an HTTP server and go to http://localhost/../path/to/../React-Parse/
 
