@@ -51,14 +51,14 @@ var Menu = React.createClass({
         <Navbar>
           <Nav>
             <Link className="navbar-brand" href="/">{this.state.title}</Link>
-            <NavItem key={1} href="#">Link</NavItem>
+            <Link className="navbar-brand" href="/about">
+              <NavItem key={1}>About</NavItem>
+            </Link>
             <NavItem key={2} href="#">Link</NavItem>
-            <DropdownButton key={3} title="Dropdown">
-              <MenuItem key="1">Action</MenuItem>
-              <MenuItem key="2">Another action</MenuItem>
-              <MenuItem key="3">Something else here</MenuItem>
-              <MenuItem divider />
-              <MenuItem key="4">Separated link</MenuItem>
+            <DropdownButton key={3} title="Posts">
+              <MenuItem key="1">Not</MenuItem>
+              <MenuItem key="2">Implemented</MenuItem>
+              <MenuItem key="3">Yet</MenuItem>
             </DropdownButton>
           </Nav>
         </Navbar>

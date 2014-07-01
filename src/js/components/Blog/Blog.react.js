@@ -11,7 +11,7 @@ var PostStore = require('../../stores/PostStore');
 var Blog = React.createClass({
 
   getInitialState: function() {
-    return { allPosts: []};
+    return { allPosts: null};
   },
   
   
@@ -24,8 +24,11 @@ var Blog = React.createClass({
   render: function() {
     // This section should be hidden by default
     // and shown when there are posts.
+    if (!this.state.allPosts) {
+      return <p>Loading posts...</p>;
+    }
     if (this.state.allPosts.length < 1) {
-      return <p>No posts</p>;
+      return <p>No posts :(</p>;
     }
 
     var allPosts = this.state.allPosts;
@@ -37,6 +40,7 @@ var Blog = React.createClass({
 
     return (
       <section id="main">
+        <h1> Posts list </h1>
         <ul id="posts-list">{posts}</ul>
       </section>
     );

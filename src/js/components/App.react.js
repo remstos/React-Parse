@@ -12,6 +12,9 @@ var Location = Router.Location
 var Blog = require('./Blog/Blog.react');
 var PostView = require('./Blog/PostView.react');
 
+var About = require('./About.react');
+
+
 var App = React.createClass({
 
   getInitialState: function() {
@@ -35,11 +38,13 @@ var App = React.createClass({
         <Locations>
           <Location path="/" handler={Blog} />
           <Location path="/post/:post" handler={PostView} />
+          <Location path="/about" handler={About} />
         </Locations>
+        <hr/>
         <footer id="info">
     			<p>Sample React Project</p>
+    			<p>GitHub : <a href="http://github.com/Kemcake/React-Parse">Kemcake/React-Parse</a></p>
     			<p>Based on work of <a href="http://facebook.com/bill.fisher.771">Bill Fisher</a></p>
-    			<p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
     		</footer>
       </div>
   	);
