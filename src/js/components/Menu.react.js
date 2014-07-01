@@ -29,6 +29,8 @@ var Nav = Bootstrap.Nav;
 var NavItem = Bootstrap.NavItem;
 var DropdownButton = Bootstrap.DropdownButton;
 var MenuItem = Bootstrap.MenuItem;
+var Link = require('react-router-component').Link;
+
 var Menu = React.createClass({
 
   getInitialState: function() {
@@ -48,7 +50,7 @@ var Menu = React.createClass({
   	return (
         <Navbar>
           <Nav>
-            <a className="navbar-brand" href="#">{this.state.title}</a>
+            <Link className="navbar-brand" href="/">{this.state.title}</Link>
             <NavItem key={1} href="#">Link</NavItem>
             <NavItem key={2} href="#">Link</NavItem>
             <DropdownButton key={3} title="Dropdown">

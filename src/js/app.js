@@ -11,5 +11,5 @@ Parse.initialize(ParseConfig.APP_ID, ParseConfig.JS_KEY);
 var App = require('./components/App.react');
 React.renderComponent(
   <App />,
-  document.getElementById('app')
+  document.body
 );
