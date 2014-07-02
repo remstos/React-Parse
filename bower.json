@@ -15,6 +15,6 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap-sass-official": "~3.1.1+2"
+    "bootstrap-sass-official": "~3.2"
   }
 }
