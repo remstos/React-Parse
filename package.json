@@ -25,7 +25,9 @@
     "watch-css": "compass watch",
     "watch-js": "STATIC_ROOT=./static watchify ./src/js/app.js -o ./build/app.js -v -d",
     "start": "npm run watch-css & npm run watch-js",
-    "build": "STATIC_ROOT=./static NODE_ENV=production browserify . | uglifyjs -cm > ./build/app.min.js  & compass compile",
+    "prod-css": "compass compile -e production --force",
+    "prod-js": "STATIC_ROOT=./static browserify ./src/js/app.js | uglifyjs -cm > ./build/app.js",
+    "prod": "npm run prod-js & npm run prod-css",
     "collect-static": "collect-static . ./static",
     "test": "jest"
   },

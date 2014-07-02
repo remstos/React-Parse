@@ -7,7 +7,7 @@ sass_dir = "src/css/sass"
 images_dir = "images"
 
 # You can select your preferred output style here (can be overridden via the command line):
-# output_style = :expanded or :nested or :compact or :compressed
+output_style = (environment == :production) ? :compressed : :expanded #:expanded or :nested or :compact or :compressed
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
 # relative_assets = true

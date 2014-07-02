@@ -1,6 +1,6 @@
 @import '../../../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss';
 
-$resourcesPaths : "../../src/resources";
+$imagesPath : "../../src/images";
 
 html,
 body {
@@ -26,7 +26,7 @@ button {
 body {
 	font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	line-height: 1.4em;
-	background: #eaeaea url(#{$resourcesPaths}/bg.png);
+	background: #eaeaea url(#{$imagesPath}/bg.png);
 	color: #4d4d4d;
 	width: 100%;
 	margin: 0 auto;
