@@ -29,12 +29,20 @@ var Nav = Bootstrap.Nav;
 var NavItem = Bootstrap.NavItem;
 var DropdownButton = Bootstrap.DropdownButton;
 var MenuItem = Bootstrap.MenuItem;
-var Link = require('react-router-component').Link;
+var Router = require('react-router-component');
+var Link = Router.Link;
 
 var Menu = React.createClass({
 
+  mixins: [Router.NavigatableMixin],
+  
   getInitialState: function() {
-    return {title:"React+Parse"};
+    return { 
+      links: [
+        {title:"About",href:"about"},
+        {title:"Link",href:""}
+      ]
+    };
   },
 
   componentDidMount: function() {
@@ -47,14 +55,19 @@ var Menu = React.createClass({
    * @return {object}
    */
   render: function() {
+    var _this = this;
+  
   	return (
-        <Navbar>
+        <Navbar className="navbar-fixed-top">
           <Nav>
-            <Link className="navbar-brand" href="/">{this.state.title}</Link>
-            <Link className="navbar-brand" href="/#/about">
-              <NavItem key={1}>About</NavItem>
-            </Link>
-            <NavItem key={2} href="#">Link</NavItem>
+            <Link className="navbar-brand" href="/">{this.props.title}</Link>
+            <ul className="nav navbar-nav">
+              <li> 
+                <Link href="/#/about">About</Link>
+              </li>
+            </ul>
+            <NavItem key={1} href="/#/about">About</NavItem>
+            <NavItem key={2} href="/#">Link</NavItem>
             <DropdownButton key={3} title="Posts">
               <MenuItem key="1">Not</MenuItem>
               <MenuItem key="2">Implemented</MenuItem>
@@ -66,11 +79,10 @@ var Menu = React.createClass({
   	);
   },
 
-  /**
-   * Event handler for 'change' events coming from the TodoStore
-   */
-  _onChange: function() {
-    //this.setState(getTodoState());
+  handleLink: function(e,f) {
+    console.log(e);
+    console.log(f);
+    //navMixin.navigate('/#about');
   }
 
 });

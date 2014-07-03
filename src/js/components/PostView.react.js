@@ -5,7 +5,7 @@
 var React = require('react');
 var ReactPropTypes = React.PropTypes;
 var Link = require('react-router-component').Link;
-var PostStore = require('../../stores/PostStore');
+var PostStore = require('../stores/PostStore');
 var PostView = React.createClass({
 
   
@@ -28,7 +28,7 @@ var PostView = React.createClass({
       return (<p>loading post ...</p>);
     }
     return (
-      <div>
+      <div className="post-view">
         <h1>{post.get('title')}</h1>
         <p>{post.get('content')}</p>
       </div>
