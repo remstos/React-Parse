@@ -5,7 +5,7 @@
 var React = require('react');
 var ReactPropTypes = React.PropTypes;
 var Link = require('react-router-component').Link;
-var PostStore = require('../../stores/PostStore');
+var PostStore = require('../stores/PostStore');
 var PostView = React.createClass({
 
   

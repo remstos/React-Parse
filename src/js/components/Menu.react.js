@@ -48,7 +48,7 @@ var Menu = React.createClass({
    */
   render: function() {
   	return (
-        <Navbar>
+        <Navbar className="navbar-fixed-top">
           <Nav>
             <Link className="navbar-brand" href="/">{this.state.title}</Link>
             <Link className="navbar-brand" href="/#/about">

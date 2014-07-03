@@ -5,10 +5,10 @@
 
 var React = require('react');
 var ReactPropTypes = React.PropTypes;
-var PostPreview = require('./PostPreview.react')
 var PostStore = require('../../stores/PostStore');
+var TimelineItem = require('./TimelineItem.react');
 
-var Blog = React.createClass({
+var Timeline = React.createClass({
 
   getInitialState: function() {
     return { allPosts: null};
@@ -22,27 +22,21 @@ var Blog = React.createClass({
    * @return {object}
    */
   render: function() {
-    // This section should be hidden by default
-    // and shown when there are posts.
-    if (!this.state.allPosts) {
-      return <p>Loading posts...</p>;
-    }
-    if (this.state.allPosts.length < 1) {
-      return <p>No posts :(</p>;
-    }
-
     var allPosts = this.state.allPosts;
     var posts = [];
 
     for (var key in allPosts) {
-      posts.push(<PostPreview key={key} post={allPosts[key]} />);
+      var invert = false;
+      if(key%2)
+        invert = true;
+      posts.push(<TimelineItem key={key} inverted={invert} post={allPosts[key]} />);
     }
-
     return (
-      <section id="main">
-        <h1> Posts list </h1>
-        <ul id="posts-list">{posts}</ul>
-      </section>
+      <div className="timeline-container col-md-8 col-md-offset-2 col-sm-12">
+        <ul className="timeline">
+          {posts}
+        </ul>
+      </div>
     );
   },
 
@@ -51,4 +45,4 @@ var Blog = React.createClass({
   }
 });
 
-module.exports = Blog;
+module.exports = Timeline;
