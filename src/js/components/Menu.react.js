@@ -34,7 +34,7 @@ var Link = require('react-router-component').Link;
 var Menu = React.createClass({
 
   getInitialState: function() {
-    return {title:"React+Parse"};
+    return {};
   },
 
   componentDidMount: function() {
@@ -50,7 +50,7 @@ var Menu = React.createClass({
   	return (
         <Navbar className="navbar-fixed-top">
           <Nav>
-            <Link className="navbar-brand" href="/">{this.state.title}</Link>
+            <Link className="navbar-brand" href="/">{this.props.title}</Link>
             <Link className="navbar-brand" href="/#/about">
               <NavItem key={1}>About</NavItem>
             </Link>

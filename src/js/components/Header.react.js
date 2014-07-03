@@ -34,7 +34,8 @@ var Header = React.createClass({
   render: function() {
   	return (
         <div className="header">
-          <h1> - - </h1> 
+          <h1>Sample React+Parse project</h1>
+          <p className="lead">tiny blog, endless possiblities</p> 
         </div>
   	);
   },
