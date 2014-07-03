@@ -12,7 +12,7 @@
         position: absolute;
         content: " ";
         width: 3px;
-        background-color: #eeeeee;
+        background-color: #f8f8f8;
         left: 50%;
         margin-left: -1.5px;
     }
@@ -51,7 +51,7 @@
             position: relative;
             -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
             box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
-            background: #eee;
+            background: #f8f8f8;
         }
 
             .timeline > li > .timeline-panel:before {

@@ -28,7 +28,7 @@ var PostView = React.createClass({
       return (<p>loading post ...</p>);
     }
     return (
-      <div>
+      <div className="post-view">
         <h1>{post.get('title')}</h1>
         <p>{post.get('content')}</p>
       </div>
