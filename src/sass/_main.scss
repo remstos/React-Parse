@@ -6,6 +6,7 @@ html,body {
 	height: 100%;
   font-family: 'Source Sans Pro',Helvetica,Sans-Serif;
   background-image: url(#{$imagesPath}/header.svg), -webkit-linear-gradient(75deg, #FF7088 15%, #F2B69D 55%);
+  background-attachment: fixed;
 	color: #f6f6f6;
 }
 .app {
