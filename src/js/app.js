@@ -63,8 +63,8 @@ React.renderComponent(
     }
 }($));
 
-$('.bg-1,.bg-3').parallax({
-	speed :	0.15
+$('.parallax-bckg').parallax({
+	speed :	0.35
 });
 
 $('.bg-2').parallax({

@@ -6,17 +6,20 @@ html,body {
 	height: 100%;
   font-family: 'Source Sans Pro',Helvetica,Sans-Serif;
 /*   background-image: url(#{$imagesPath}/header.svg), -webkit-linear-gradient(75deg, #FF7088 15%, #F2B69D 55%); */
-  background-image: url(#{$imagesPath}/header.svg), -webkit-linear-gradient(#21b5de 0%, #41eae7 100%);;
+  background-image: url(#{$imagesPath}/header.svg), -webkit-linear-gradient(#21b5de 0%, #41eae7 100%);
   background-attachment: fixed;
+  
 	color: #f6f6f6;
 }
 .app {
   height: 100%;
   width: 100%;
   padding: 0px;
+/*   background: url(#{$imagesPath}/image-wrapper.svg); */
+/*   background-size: 100% 2000px; */
 }
 .navbar {
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 /* HEADER */

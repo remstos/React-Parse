@@ -10,9 +10,9 @@ var Header = require('./Header.react');
 var Footer = require('./Footer.react');
 
 /* ROOTER */
-var Router = require('react-router-component')
-var Pages = Router.Pages
-var Page = Router.Page
+var Router = require('react-router-component');
+var Pages = Router.Pages;
+var Page = Router.Page;
 var NotFound = Router.NotFound;
 
 /* PAGES COMPONENTS */
@@ -39,7 +39,7 @@ var App = React.createClass({
    */
   render: function() {    
   	return (
-      <div className="app">
+      <div className="app parallax-bckg">
         <Menu title="React+Parse"/>
         <Header/>
         <div className="main-container">
