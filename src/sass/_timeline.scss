@@ -5,7 +5,14 @@
     position: relative;
     color: #454545;
 }
-
+    .timeline .posts-status {
+      position: relative;
+      color: white;
+      width: 200px;
+      text-align: center;
+      margin: auto;
+      top: -50px;
+    }
     .timeline:before {
         top: 0;
         bottom: 0;

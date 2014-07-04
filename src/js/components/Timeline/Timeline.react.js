@@ -24,12 +24,19 @@ var Timeline = React.createClass({
   render: function() {
     var allPosts = this.state.allPosts;
     var posts = [];
-
-    for (var key in allPosts) {
-      var invert = false;
-      if(key%2)
-        invert = true;
-      posts.push(<TimelineItem key={key} inverted={invert} post={allPosts[key]} />);
+    if (!allPosts) {
+      posts.push(<h3 className="posts-status">Loading posts ... </h3>);
+    }
+    else {
+      if (allPosts.length == 0) {
+        posts.push(<h3 className="posts-status">No posts</h3>);
+      }
+      for (var key in allPosts) {
+        var invert = false;
+        if(key%2)
+          invert = true;
+        posts.push(<TimelineItem key={key} inverted={invert} post={allPosts[key]} />);
+      }
     }
     return (
       <div className="timeline-container col-md-8 col-md-offset-2 col-sm-12">

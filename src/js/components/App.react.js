@@ -39,19 +39,19 @@ var App = React.createClass({
    */
   render: function() {    
   	return (
-      <div className="app parallax-bckg">
-        <Menu title="React+Parse"/>
-        <Header/>
-        <div className="main-container">
-          <Pages path={this.state.path}>
-            <Page path="/" handler={Timeline} />
-            <Page path="/#/post/:post" handler={PostView} />
-            <Page path="/#/about" handler={About} />
-            <NotFound handler={Timeline} />
-          </Pages>
+        <div className="app parallax-bckg">
+          <Menu title="React+Parse"/>
+          <Header/>
+          <div className="main-container">
+            <Pages path={this.state.path}>
+              <Page path="/" handler={Timeline} />
+              <Page path="/#/post/:post" handler={PostView} />
+              <Page path="/#/about" handler={About} />
+              <NotFound handler={Timeline} />
+            </Pages>
+          </div>
+          <Footer/>        
         </div>
-        <Footer/>        
-      </div>
   	);
   },
 

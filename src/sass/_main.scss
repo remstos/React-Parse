@@ -7,16 +7,19 @@ html,body {
   font-family: 'Source Sans Pro',Helvetica,Sans-Serif;
 /*   background-image: url(#{$imagesPath}/header.svg), -webkit-linear-gradient(75deg, #FF7088 15%, #F2B69D 55%); */
   background-image: url(#{$imagesPath}/header.svg), -webkit-linear-gradient(#21b5de 0%, #41eae7 100%);
+/*   background: -webkit-linear-gradient(#21b5de 0%, #41eae7 100%); */
   background-attachment: fixed;
   
 	color: #f6f6f6;
 }
+.parallax-bckg {
+  
+}
 .app {
-  height: 100%;
   width: 100%;
   padding: 0px;
-/*   background: url(#{$imagesPath}/image-wrapper.svg); */
-/*   background-size: 100% 2000px; */
+  overflow: auto;
+  background: url(#{$imagesPath}/ParallaxStarsLess.png);
 }
 .navbar {
   opacity: 0.95;
