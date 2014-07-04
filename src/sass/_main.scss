@@ -17,6 +17,7 @@ html,body {
 }
 .app {
   width: 100%;
+  min-height: 100%;
   padding: 0px;
   overflow: auto;
   background: url(#{$imagesPath}/ParallaxStarsLess.png);
