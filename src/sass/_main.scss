@@ -7,6 +7,10 @@ html,body {
   font-family: 'Source Sans Pro',Helvetica,Sans-Serif;
 /*   background-image: url(#{$imagesPath}/header.svg), -webkit-linear-gradient(75deg, #FF7088 15%, #F2B69D 55%); */
   background-image: url(#{$imagesPath}/header.svg), -webkit-linear-gradient(#21b5de 0%, #41eae7 100%);
+    background-image: url(#{$imagesPath}/header.svg), -moz-linear-gradient(#21b5de 0%, #41eae7 100%);
+    background-image: url(#{$imagesPath}/header.svg), -o-linear-gradient(#21b5de 0%, #41eae7 100%);
+    background-image: url(#{$imagesPath}/header.svg), -ms-linear-gradient(#21b5de 0%, #41eae7 100%);
+
 /*   background: -webkit-linear-gradient(#21b5de 0%, #41eae7 100%); */
   background-attachment: fixed;
   
