@@ -11,8 +11,8 @@ var Footer = require('./Footer.react');
 
 /* ROOTER */
 var Router = require('react-router-component');
-var Pages = Router.Pages;
-var Page = Router.Page;
+var Locations = Router.Locations;
+var Location = Router.Location;
 var NotFound = Router.NotFound;
 
 /* PAGES COMPONENTS */
@@ -22,7 +22,7 @@ var About = require('./About.react');
 
 
 var App = React.createClass({
-
+  
   getInitialState: function() {
     return {path: window.location.pathname+window.location.hash};
   },
@@ -31,8 +31,6 @@ var App = React.createClass({
     console.log(this.state.path);
   },
 
-  componentWillUnmount: function() {
-  },
 
   /**
    * @return {object}
@@ -40,27 +38,21 @@ var App = React.createClass({
   render: function() {    
   	return (
         <div className="app parallax-bckg">
-          <Menu title="React+Parse"/>
+          <Menu title="React+Parse" />
           <Header/>
           <div className="main-container">
-            <Pages path={this.state.path}>
-              <Page path="/" handler={Timeline} />
-              <Page path="/#/post/:post" handler={PostView} />
-              <Page path="/#/about" handler={About} />
+            <Locations ref="pages" path={this.state.path}>
+              <Location path="/" handler={Timeline} />
+              <Location path="/#/post/:post" handler={PostView} />
+              <Location path="/#/about" handler={About} />
               <NotFound handler={Timeline} />
-            </Pages>
+            </Locations>
           </div>
           <Footer/>        
         </div>
   	);
   },
 
-  /**
-   * Event handler for 'change' events coming from the TodoStore
-   */
-  _onChange: function() {
-
-  }
 
 });
 

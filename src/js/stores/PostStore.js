@@ -29,6 +29,7 @@ var Post = Parse.Object.extend('Post', {}, {
   
   getAll: function(callback) {
     var query = new Parse.Query(Post);
+    query.descending("createdAt");
     query.find({
       success: function(posts) {
         callback(posts);

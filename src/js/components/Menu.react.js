@@ -33,19 +33,18 @@ var Router = require('react-router-component');
 var Link = Router.Link;
 
 var Menu = React.createClass({
-
-  mixins: [Router.NavigatableMixin],
   
   getInitialState: function() {
     return { 
       links: [
-        {title:"About",href:"about"},
-        {title:"Link",href:""}
+        {title:"About",href:"/#/about"},
+        {title:"Link",href:"/"}
       ]
     };
   },
 
   componentDidMount: function() {
+    console.log(this.refs);
   },
 
   componentWillUnmount: function() {
@@ -56,33 +55,17 @@ var Menu = React.createClass({
    */
   render: function() {
     var _this = this;
-  
   	return (
         <Navbar className="navbar-fixed-top">
           <Nav>
-            <Link className="navbar-brand" href="/">{this.props.title}</Link>
-            <ul className="nav navbar-nav">
-              <li> 
-                <Link href="/#/about">About</Link>
-              </li>
-            </ul>
-            <NavItem key={1} href="/#/about">About</NavItem>
-            <NavItem key={2} href="/#">Link</NavItem>
-            <DropdownButton key={3} title="Posts">
-              <MenuItem key="1">Not</MenuItem>
-              <MenuItem key="2">Implemented</MenuItem>
-              <MenuItem key="3">Yet</MenuItem>
-            </DropdownButton>
+            <Link className="navbar-brand" href="/#/">{this.props.title}</Link>
+            <li>
+              <Link href="/#/about">About</Link>
+            </li>
           </Nav>
         </Navbar>
         
   	);
-  },
-
-  handleLink: function(e,f) {
-    console.log(e);
-    console.log(f);
-    //navMixin.navigate('/#about');
   }
 
 });
