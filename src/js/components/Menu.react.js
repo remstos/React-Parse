@@ -62,6 +62,11 @@ var Menu = React.createClass({
             <li>
               <Link href="/#/about">About</Link>
             </li>
+            <li>
+              <a href="https://github.com/Kemcake/React-Parse" target="_blank">
+                This blog on GitHub
+              </a>
+            </li>
           </Nav>
         </Navbar>
         

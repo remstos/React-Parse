@@ -6,6 +6,8 @@
 var React = require('react');
 var ReactPropTypes = React.PropTypes;
 var PostStore = require('../../stores/PostStore');
+var Header = require('../Header.react');
+
 var TimelineItem = require('./TimelineItem.react');
 var Link = require('react-router-component').Link;
 
@@ -40,11 +42,13 @@ var Timeline = React.createClass({
       }
     }
     return (
-      
-      <div className="timeline-container col-md-8 col-md-offset-2 col-sm-12">
-        <ul className="timeline">
-          {posts}
-        </ul>
+      <div>
+        <Header title="React+Parse Blog"/>
+        <div className="timeline-container col-md-8 col-md-offset-2 col-sm-12">
+          <ul className="timeline">
+            {posts}
+          </ul>
+        </div>
       </div>
     );
   },

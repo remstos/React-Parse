@@ -38,8 +38,7 @@ var App = React.createClass({
   render: function() {    
   	return (
         <div className="app parallax-bckg">
-          <Menu title="React+Parse" />
-          <Header/>
+          <Menu title="Remi Santos" />
           <div className="main-container">
             <Locations ref="pages" path={this.state.path}>
               <Location path="/" handler={Timeline} />
