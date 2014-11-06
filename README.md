@@ -41,7 +41,7 @@ Now you have a working sample React Project, go to `src/js/stores/ParseConfig.js
 This sample project is a blog showing a list of Post. To see it working, go on you Parse App and create a class `Post` with 3 colums : `title`, `content`and `name`
 
 # Working example
-You can see a fully working example of what it looks like -> (My internship blog)[http://blog.remisantos.com]
+You can see a fully working example of what it looks like -> [My internship blog](http://blog.remisantos.com)
 
 # Built with 
 What's in the box
@@ -66,5 +66,6 @@ Be careful, this is a work in progress ! Things may not work as expected
 * Rémi Santos (@Kemcake)
 
 Thanks to [@ArnaudRinquin](https://github.com/ArnaudRinquin) 
+
 Based on [Todomvc-flux](https://github.com/facebook/react/tree/master/examples/todomvc-flux) by Bill Fisher
 
