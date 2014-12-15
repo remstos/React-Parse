@@ -1,2 +1,8 @@
 /bower_components/
 src/js/stores/ParseConfig.json
+node_modules
+npm-debug.log
+.DS_Store
+*/.DS_Store
+*/*/.DS_Store
+.sass-cache
